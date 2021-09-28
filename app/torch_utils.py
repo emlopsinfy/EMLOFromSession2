@@ -36,7 +36,8 @@ def transform_image(image_bytes):
                                     transforms.Normalize((0.1307,),(0.3081,))])
 
     image = Image.open(io.BytesIO(image_bytes))
-    return transform(image).unsqueeze(0)
+    return (transform(image).unsqueeze(0),image)
+    #return transform(image).unsqueeze(0)
 
 def get_prediction(image_tensor):
     images = image_tensor.reshape(-1, 28*28)

@@ -1,23 +1,22 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-f3w7mx95pdgytmzzmecangseqb83dfgtowi0imjiwaevhan4fjkqjbyhzmi3ahiu" crossorigin="anonymous"> 
 <br/> 
-<h4 class="text-center">mnist pattern recognition</h4> 
+	<h4 class="text-center">MNIST Digit Classification</h4> 
 <br/> 
-<form method="post" action='/predict' enctype="multipart/form-data" class="w3-container"> 
-	<div class="mb-5 text-center">
-		<label for="formfile" class="form-label">upload image:</label> 
+<form method="post" action='/predict' enctype="multipart/form-data"> 
+	<div class="mb-5 text-center"> 
+		<label for="formfile" class="form-label">Upload Image:</label> 
 		<input class="form-control" type="file" name="file" id="formfile"> 
 	</div> 
-	
 	<div class="d-grid gap-2 col-4 mx-auto"> 
 		<button class="btn btn-primary" type="submit">predict</button> 
 	</div> 
 </form> 
-<br/> 
+<br/>
 {% if img %} 
 <p class="text-center">image uploaded: 
 <img class="mb-4" src="{{img}}" alt="" width=120, height='120'> 
 </p> 
-{% endif%} 
+{% endif%}
 {% if prediction %} 
-<h6 class="text-center">prediction is {{prediction}}</h6> 
+	<h6 class="text-center">prediction is {{prediction}}</h6> 
 {% endif %}

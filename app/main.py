@@ -1,7 +1,7 @@
-from src.utils import get_encoded_img, get_image
-import src.config as config
+from app.src.utils import get_encoded_img, get_image
+import app.src.config as config
 from flask import Flask, render_template, request, redirect, url_for,jsonify
-from src.predict import get_prediction
+from app.src.predict import get_prediction
 
 app = Flask(__name__)
 

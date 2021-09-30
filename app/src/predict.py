@@ -1,6 +1,6 @@
-from src.model import Model
-import src.config as config
-from src.transforms import valid_transforms
+from app.src.model import Model
+import app.src.config as config
+from app.src.transforms import valid_transforms
 import torch
 
 

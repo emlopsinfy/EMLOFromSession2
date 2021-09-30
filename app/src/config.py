@@ -16,4 +16,4 @@ classes = (
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg"}
 
 PRED_TO_CLASS = {i: cl for i, cl in enumerate(classes)}
-MODEL_PATH = os.path.join(path, "models", "savedmodel.pt")
+MODEL_PATH = os.path.join(path, "app/models", "savedmodel.pt")
